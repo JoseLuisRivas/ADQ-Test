@@ -1,8 +1,9 @@
-package com.adq.adq.Fragments;
+package com.adq.adq.fragments;
 
 
-import android.os.Bundle;
 import android.app.Fragment;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,10 +13,10 @@ import com.adq.adq.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DestacadosFragment extends Fragment {
+public class HotelesFragment extends Fragment {
 
 
-    public DestacadosFragment() {
+    public HotelesFragment() {
         // Required empty public constructor
     }
 
@@ -25,11 +26,19 @@ public class DestacadosFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Retorna una vista que voy a inflar
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_destacados, container, false);
-
-
+        return inflater.inflate(R.layout.fragment_hoteles, container, false);
 
     }
 
+    @Override
+    public void onResume() {
+        Log.e("DEBUG", "onResume of HotelesFragment");
+        super.onResume();
+    }
 
+    @Override
+    public void onPause() {
+        Log.e("DEBUG", "onPause of HotelesFragment");
+        super.onPause();
+    }
 }

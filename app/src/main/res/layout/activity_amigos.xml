@@ -1,7 +1,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/font_50dp">
 
     <TableLayout
         android:layout_width="fill_parent"
@@ -38,7 +39,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_Columna2"
+                android:id="@+id/tv_Columna212"
                 android:text="3"
                 android:gravity="center"
                 android:textSize="@dimen/font_56dp"
@@ -47,7 +48,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_Columna3"
+                android:id="@+id/tv_Columna213"
                 android:text="4"
                 android:gravity="center"
                 android:textSize="@dimen/font_56dp"
@@ -56,7 +57,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_Columna4"
+                android:id="@+id/tv_Columna214"
                 android:text="5"
                 android:gravity="center"
                 android:textSize="@dimen/font_56dp"
@@ -73,7 +74,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_Columna6"
+                android:id="@+id/tv_Columna216"
                 android:text="3"
                 android:gravity="center"
                 android:textSize="@dimen/font_56dp"/>
@@ -81,7 +82,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_Columna7"
+                android:id="@+id/tv_Columna217"
                 android:text="4"
                 android:gravity="center"
                 android:textSize="@dimen/font_56dp" />
@@ -89,7 +90,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_Columna8"
+                android:id="@+id/tv_Columna218"
                 android:text="5"
                 android:gravity="center"
                 android:textSize="@dimen/font_56dp" />
@@ -97,7 +98,7 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow3"
+            android:id="@+id/tableRow23"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
@@ -137,7 +138,7 @@
         </TableRow>
 -->
         <TableRow
-            android:id="@+id/tableRow5"
+            android:id="@+id/tableRow25"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
