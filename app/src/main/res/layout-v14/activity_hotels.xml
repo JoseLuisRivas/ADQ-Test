@@ -7,14 +7,14 @@
     tools:context="com.adq.adq.HotelsActivity"
     android:tag="phone">
 
-<RelativeLayout
-    android:id="@+id/rl_activity_ppal_hoteles"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true"
-    android:layout_above="@+id/gridLayout">
+    <RelativeLayout
+        android:id="@+id/rl_activity_ppal_hoteles"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/gridLayout">
 
 
     </RelativeLayout>

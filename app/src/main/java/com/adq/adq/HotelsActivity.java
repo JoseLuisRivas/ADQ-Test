@@ -28,7 +28,7 @@ public class HotelsActivity extends ActionBarActivity implements View.OnTouchLis
 };
 */
 private ImageButton btnVistaLista, btnFavoritos, btnVistaMap;
-private HotelesFragment fragmentlistar;
+private HotelesFragment fragmentListar;
 private AmigosFragment fragmentAmigos;
 private PerfilFragment fragmentPerfil;
 
@@ -55,17 +55,6 @@ private PerfilFragment fragmentPerfil;
  */
 
         inicializarComponentes();
-/*
-
-        FragmentManager manager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = manager.beginTransaction();
-
-        for (Fragment fragment : fragments){
-            fragmentTransaction.add(R.id.rl_activity_ppal_hoteles, fragment).hide(fragment);
-        }
-
-        fragmentTransaction.show(fragments[1]).commit();
-*/
     }
 
     private void inicializarComponentes() {
@@ -76,17 +65,17 @@ private PerfilFragment fragmentPerfil;
         btnVistaMap = (ImageButton) findViewById(R.id.btn_vista_map);
         btnVistaMap.setOnTouchListener(this);
 
-        cargarFragmento(getFragmentlistar());
+        cargarFragmento(getFragmentListar());
     }
 
 
 
     //<editor-fold desc="DescriptionMETODOS GET DE INICIALIZACION BAJO DEMANDA - LAZY INITIALIZATION">
-    public HotelesFragment getFragmentlistar() {
-        if(fragmentlistar == null){
-            fragmentlistar = new HotelesFragment();
+    public HotelesFragment getFragmentListar() {
+        if(fragmentListar == null){
+            fragmentListar = new HotelesFragment();
         }
-        return fragmentlistar;
+        return fragmentListar;
     }
 
     public AmigosFragment getFragmentAmigos() {
@@ -116,10 +105,10 @@ private PerfilFragment fragmentPerfil;
     @Override
     public boolean onTouch(View view, MotionEvent event) {
         ImageButton btn = (ImageButton) view;
-/*
-if (event.getAction() == MotionEvent.ACTION_DOWN){
 
-}*/
+if (event.getAction() == MotionEvent.ACTION_DOWN){
+    Toast.makeText(this, String.valueOf(btn.getBackground()), Toast.LENGTH_SHORT).show();
+}
 
         int actionMasked = event.getActionMasked();
 //        Toast.makeText(this, String.valueOf(actionMasked), Toast.LENGTH_SHORT).show();
@@ -142,12 +131,12 @@ if (event.getAction() == MotionEvent.ACTION_DOWN){
         switch (btn.getId()){
             case R.id.btn_vista_lista:
                 Toast.makeText(this, "R.id.btn_vista_lista", Toast.LENGTH_SHORT).show();
-            cargarFragmento(getFragmentlistar());
+            cargarFragmento(getFragmentListar());
             break;
             case R.id.btn_favoritos:
                 Toast.makeText(this, "R.id.btn_favoritos", Toast.LENGTH_SHORT).show();
             cargarFragmento(getFragmentAmigos());
-            break;
+                break;
             case R.id.btn_vista_map:
                 Toast.makeText(this, "R.id.btn_vista_map", Toast.LENGTH_SHORT).show();
             cargarFragmento(getFragmentPerfil());

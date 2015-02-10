@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    card_view:cardCornerRadius="2dp">
+
+
+ <!-- Minuto 1:13 video 2 Recycler, Card View -->
+
+<RelativeLayout
+    android:layout_width="fill_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/amigo_avatar"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/avatar_amigo"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/amigo_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Nombre Amigo"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/amigo_avatar"
+        android:layout_toEndOf="@+id/amigo_avatar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Twitter amigo"
+        android:id="@+id/amigo_twitter"
+        android:layout_below="@+id/amigo_nombre"
+        android:layout_alignLeft="@+id/amigo_nombre"
+        android:layout_alignStart="@+id/amigo_nombre" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Último hotel que visito"
+        android:id="@+id/amigo_ultimo_hotel"
+        android:layout_below="@+id/amigo_twitter"
+        android:layout_toRightOf="@+id/amigo_avatar"
+        android:layout_toEndOf="@+id/amigo_avatar" />
+
+    <!--    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Ultimo hotel visto"
+            android:id="@+id/amigo_utilmo_hotel_visito"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/amigo_twitter"
+            android:layout_toRightOf="@+id/amigo_avatar"
+            android:layout_toEndOf="@+id/amigo_avatar" />-->
+
+</RelativeLayout>
+</android.support.v7.widget.CardView>
