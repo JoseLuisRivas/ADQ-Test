@@ -46,8 +46,33 @@ public class AmigosFragment extends Fragment {
         joseluis.setNombreAmigo("Jose Luis");
         joseluis.setTwitter("JoseLuis3");
         joseluis.setUltimoHotel("Hotel del Campo");
-
         amigoArrayList.add(joseluis);
+
+        Amigo joseluis1 =  new Amigo();
+        joseluis1.setNombreAmigo("Jose Luis");
+        joseluis1.setTwitter("JoseLuis3");
+        joseluis1.setUltimoHotel("Hotel del Campo");
+        amigoArrayList.add(joseluis1);
+
+        Amigo joseluis2 =  new Amigo();
+        joseluis2.setNombreAmigo("Jose Luis 2");
+        joseluis2.setTwitter("JoseLuis3");
+        joseluis2.setUltimoHotel("Hotel del Campo");
+        amigoArrayList.add(joseluis2);
+
+        Amigo joseluis3 =  new Amigo();
+        joseluis3.setNombreAmigo("Jose Luis 3");
+        joseluis3.setTwitter("JoseLuis3");
+        joseluis3.setUltimoHotel("Hotel del Campo");
+
+        amigoArrayList.add(joseluis3);
+
+        Amigo joseluis4 =  new Amigo();
+        joseluis4.setNombreAmigo("Jose Luis4");
+        joseluis4.setTwitter("JoseLuis3");
+        joseluis4.setUltimoHotel("Hotel del Campo");
+
+        amigoArrayList.add(joseluis4);
 
         RecyclerView recyclerView = (RecyclerView) getActivity().findViewById(R.id.my_recycler_view);
         recyclerView.setHasFixedSize(true);

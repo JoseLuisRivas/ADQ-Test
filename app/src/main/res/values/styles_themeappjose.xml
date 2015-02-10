@@ -130,10 +130,10 @@
     <color name="color_background_main">#CDDC39</color>
     <color name="color_text_white">#FFFFFF</color>
     <color name="color_accent">#fedc23</color>
-    <color name="color_primary_adq">#60851f</color>
-    <color name="color_secundary_adq">#a8bf16</color>
-<!--    <color name="color_primary_adq">#0288d1</color>
-    <color name="color_secundary_adq">#81d4fa</color> -->
+       <color name="color_primary_adq">#60851f</color>
+        <color name="color_secundary_adq">#a8bf16</color><!-- -->
+        <color name="color_primary_orange">#ffff8800</color>
+        <color name="color_secundary_yellow">#ffffbb33</color>
     <color name="color_black">#3d3c4a</color>
     <color name="custom_greyDrk_5e5e5e">#5e5e5e</color>
     <color name="custom_blue_019bf1">#019bf1</color>

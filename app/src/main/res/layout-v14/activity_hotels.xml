@@ -7,6 +7,17 @@
     tools:context="com.adq.adq.HotelsActivity"
     android:tag="phone">
 
+    <ImageButton
+        android:layout_width="@dimen/font_56dp"
+        android:layout_height="@dimen/font_56dp"
+        android:id="@+id/btn_ppal_hotel"
+        android:background="@drawable/ripple"
+        android:src="@drawable/login_icon30x30"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
     <RelativeLayout
         android:id="@+id/rl_activity_ppal_hoteles"
         android:layout_width="fill_parent"
@@ -15,6 +26,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_above="@+id/gridLayout">
+
 
 
     </RelativeLayout>
