@@ -74,7 +74,7 @@ public class AmigosFragment extends Fragment {
 
         amigoArrayList.add(joseluis4);
 
-        RecyclerView recyclerView = (RecyclerView) getActivity().findViewById(R.id.my_recycler_view);
+        RecyclerView recyclerView = (RecyclerView) getActivity().findViewById(R.id.recycler_view_amigos);
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(new AmigosAdapter(amigoArrayList, R.layout.row_amigos));
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));

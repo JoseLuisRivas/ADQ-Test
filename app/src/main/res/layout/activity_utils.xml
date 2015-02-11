@@ -1,0 +1,79 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootPane"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.adq.adq.HotelsActivity"
+    android:tag="phone">
+
+    <ImageButton
+        android:layout_width="@dimen/font_56dp"
+        android:layout_height="@dimen/font_56dp"
+        android:id="@+id/btn_ppal_hotel"
+        android:background="@drawable/ripple"
+        android:src="@drawable/login_icon30x30"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <RelativeLayout
+        android:id="@+id/rl_activity_ppal_hoteles"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/gridLayout">
+
+
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="1"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:columnOrderPreserved="false"
+        android:paddingTop="0dp"
+        android:background="@color/color_action_bar">
+
+        <ImageButton
+            android:id="@+id/btn_vista_lista"
+            android:layout_width="124dp"
+            android:layout_height="match_parent"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_action_view_as_list"/>
+
+
+        <ImageButton
+            android:id="@+id/btn_favoritos"
+            android:layout_width="124dp"
+            android:layout_height="match_parent"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_jl_user_women" />
+
+        <ImageButton
+            android:id="@+id/btn_vista_map"
+            android:layout_width="124dp"
+            android:layout_height="match_parent"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_location_white" />
+
+    </GridLayout>
+
+
+</RelativeLayout>

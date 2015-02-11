@@ -1,95 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="0dp"
-        android:layout_marginStart="0dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="0dp"
-        android:layout_above="@+id/gridLayout">
-
-        <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/imgContacto"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/ic_jl_user_women"
-                android:background="@color/primary_material_dark"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:alpha="0.8"
-                android:cropToPadding="false"
-                android:scaleType="fitXY" />
-
-            <EditText
-                android:id="@+id/cmpNombre"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textCapWords|textPersonName"
-                android:ems="10"
-                android:hint="trewtrte"
-                android:layout_below="@+id/imgContacto"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="10dp" />
-
-            <EditText
-                android:id="@+id/cmpTelefono"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="phone"
-                android:ems="10"
-                android:hint="ewrewre"
-                android:layout_below="@+id/cmpNombre"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp" />
-
-            <EditText
-                android:id="@+id/cmpEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:ems="10"
-                android:hint="dsfd"
-                android:layout_below="@+id/cmpTelefono"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="10dp" />
-
-            <EditText
-                android:id="@+id/cmpDireccion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textMultiLine"
-                android:ems="10"
-                android:hint="fsdfsd"
-                android:layout_below="@+id/cmpEmail"
-                android:minLines="2"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="10dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Fragment Hoteles"
-                android:id="@+id/textView2"
-                android:layout_alignTop="@+id/imgContacto"
-                android:layout_centerHorizontal="true" />
-        </RelativeLayout>
-    </ScrollView>
-
-</RelativeLayout>
+        android:layout_height="match_parent"
+        android:text="New Text"
+        android:scrollbars="vertical"
+        android:id="@+id/recycler_view_hoteles"/>
+</FrameLayout>

@@ -24,6 +24,10 @@
             android:name=".AmigosActivity"
             android:label="@string/title_activity_amigos" >
         </activity>
+        <activity
+            android:name=".UtilsActivity"
+            android:label="@string/utils_activity" >
+        </activity>
     </application>
 
 </manifest>

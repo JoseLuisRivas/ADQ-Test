@@ -19,5 +19,6 @@
     <string name="comments">Comments</string>
     <string name="perfil">Perfil</string>
     <string name="title_activity_amigos">AmigosActivity</string>
+    <string name="utils_activity">UtilsActivity</string>
 
 </resources>

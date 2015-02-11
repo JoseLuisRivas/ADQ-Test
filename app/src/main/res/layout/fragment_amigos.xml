@@ -8,5 +8,5 @@
         android:layout_height="match_parent"
         android:text="New Text"
         android:scrollbars="vertical"
-        android:id="@+id/my_recycler_view"/>
+        android:id="@+id/recycler_view_amigos"/>
 </FrameLayout>
