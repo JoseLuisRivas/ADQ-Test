@@ -1,0 +1,480 @@
+Index: app/src/main/java/com/adq/adq/AmigosActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/adq/adq/AmigosActivity.java	(revision )
++++ app/src/main/java/com/adq/adq/AmigosActivity.java	(revision )
+@@ -0,0 +1,48 @@
++package com.adq.adq;
++
++import android.graphics.Typeface;
++import android.support.v7.app.ActionBarActivity;
++import android.os.Bundle;
++import android.view.Menu;
++import android.view.MenuItem;
++import android.widget.TextView;
++
++
++public class AmigosActivity extends ActionBarActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_amigos);
++
++
++        Typeface iconsFamily = Typeface.createFromAsset(getAssets(), "fonts/glyphIcons.ttf");
++
++
++        TextView iconUser = (TextView) findViewById(R.id.tv_Columna2);
++        iconUser.setTypeface(iconsFamily);
++        iconUser.setText("\ue604");
++
++        TextView iconHeart = (TextView) findViewById(R.id.tv_Columna3);
++        iconHeart.setTypeface(iconsFamily);
++        iconHeart.setText("\ue601");
++
++        TextView iconComment = (TextView) findViewById(R.id.tv_Columna4);
++        iconComment.setTypeface(iconsFamily);
++        iconComment.setText("\ue610");
++
++        TextView iconUser1 = (TextView) findViewById(R.id.tv_Columna6);
++        iconUser1.setTypeface(iconsFamily);
++        iconUser1.setText("\ue604");
++
++        TextView iconHeart2 = (TextView) findViewById(R.id.tv_Columna7);
++        iconHeart2.setTypeface(iconsFamily);
++        iconHeart2.setText("\ue609");
++
++        TextView iconComment3 = (TextView) findViewById(R.id.tv_Columna8);
++        iconComment3.setTypeface(iconsFamily);
++        iconComment3.setText("\ue610");
++    }
++
++
++}
+Index: app/src/main/res/layout/activity_amigos.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_amigos.xml	(revision )
++++ app/src/main/res/layout/activity_amigos.xml	(revision )
+@@ -0,0 +1,343 @@
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="fill_parent"
++    android:layout_height="fill_parent"
++    android:orientation="vertical">
++
++    <TableLayout
++        android:layout_width="fill_parent"
++        android:layout_height="wrap_content"
++        android:shrinkColumns="*"
++        android:stretchColumns="*"
++        android:orientation="vertical" >
++
++        <TableRow
++            android:id="@+id/tableRow14"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:gravity="center_horizontal"
++            android:padding="10dip"
++            >
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="Row 1"
++                android:gravity="center"
++                android:textSize="24sp"
++                android:layout_span="3"
++                android:background="#FF260A" />
++
++        </TableRow>
++
++        <TableRow
++            android:id="@+id/tableRow32"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:padding="5dip">
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:id="@+id/tv_Columna2"
++                android:text="3"
++                android:gravity="center"
++                android:textSize="@dimen/font_56dp"
++                android:background="#1DA43F" />
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:id="@+id/tv_Columna3"
++                android:text="4"
++                android:gravity="center"
++                android:textSize="@dimen/font_56dp"
++                android:background="#F03D19" />
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:id="@+id/tv_Columna4"
++                android:text="5"
++                android:gravity="center"
++                android:textSize="@dimen/font_56dp"
++                android:background="#0A2BE9" />
++
++        </TableRow>
++
++        <TableRow
++            android:id="@+id/tableRow34"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:padding="5dip">
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:id="@+id/tv_Columna6"
++                android:text="3"
++                android:gravity="center"
++                android:textSize="@dimen/font_56dp"/>
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:id="@+id/tv_Columna7"
++                android:text="4"
++                android:gravity="center"
++                android:textSize="@dimen/font_56dp" />
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:id="@+id/tv_Columna8"
++                android:text="5"
++                android:gravity="center"
++                android:textSize="@dimen/font_56dp" />
++
++        </TableRow>
++
++        <TableRow
++            android:id="@+id/tableRow3"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:gravity="center_horizontal"
++            android:padding="5dip" >
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="Row 3"
++                android:gravity="center"
++                android:textSize="15sp" />
++
++        </TableRow>
++<!--
++        <TableRow
++            android:id="@+id/tableRow4"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:padding="5dip" >
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="100dp"
++                android:text="Row 4, Column 1 spanning 2 columns"
++                android:gravity="center"
++                android:textSize="15sp"
++                android:layout_span="2"
++                android:background="#81726F" />
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="Row 4, Column 2"
++                android:gravity="center"
++                android:textSize="15sp" />
++
++        </TableRow>
++-->
++        <TableRow
++            android:id="@+id/tableRow5"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:background="#FFFFFF"
++            android:padding="5dip" >
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="Image:"
++                android:gravity="center"
++                android:textSize="15sp"
++                android:textColor="#000000"
++                android:background="#F0E031" />
++
++            <ImageView
++                android:id="@+id/imageView1"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:src="@drawable/ic_launcher"
++                android:background="#31F0E7"
++                android:gravity="center"/>
++
++            <ImageView
++                android:id="@+id/imageView2"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:src="@drawable/ic_launcher"
++                android:background="#CE0AFF"
++                android:gravity="center"/>
++
++        </TableRow>
++
++    </TableLayout>
++
++    <TextView
++        android:id="@+id/space1"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:text="" />
++
++    <TableLayout
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:shrinkColumns="*"
++        android:stretchColumns="*"
++        android:orientation="vertical" >
++
++        <TableRow
++            android:id="@+id/tableRow1"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:gravity="center_horizontal">
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="Table 2"
++                android:textColor="#000000"
++                android:gravity="center"
++                android:layout_span="4"
++                android:background="#FFFFFF"
++                android:layout_margin="1dp" />
++
++        </TableRow>
++
++
++        <TableRow
++            android:id="@+id/tableRow2"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:gravity="center_horizontal" >
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="A"
++                android:textColor="#000000"
++                android:layout_margin="1dp"
++                android:gravity="center"
++                android:background="#FFFFFF"/>
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="B"
++                android:textColor="#000000"
++                android:gravity="center"
++                android:layout_margin="1dp"
++                android:background="#FFFFFF"/>
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="C"
++                android:textColor="#000000"
++                android:gravity="center"
++                android:layout_margin="1dp"
++                android:background="#FFFFFF"/>
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="D"
++                android:textColor="#000000"
++                android:gravity="center"
++                android:layout_margin="1dp"
++                android:background="#FFFFFF"/>
++
++        </TableRow>
++
++        <TableRow
++            android:id="@+id/tableRow35"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:gravity="center_horizontal" >
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="E"
++                android:textColor="#000000"
++                android:layout_margin="1dp"
++                android:gravity="center"
++                android:background="#FFFFFF"/>
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="F"
++                android:textColor="#000000"
++                android:gravity="center"
++                android:layout_margin="1dp"
++                android:background="#FFFFFF"/>
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="G"
++                android:textColor="#000000"
++                android:gravity="center"
++                android:layout_margin="1dp"
++                android:background="#FFFFFF"/>
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="H"
++                android:textColor="#000000"
++                android:gravity="center"
++                android:layout_margin="1dp"
++                android:background="#FFFFFF"/>
++
++        </TableRow>
++
++        <TableRow
++            android:id="@+id/tableRow47"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:gravity="center_horizontal" >
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="I"
++                android:textColor="#000000"
++                android:layout_margin="1dp"
++                android:gravity="center"
++                android:background="#FFFFFF"/>
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="J"
++                android:textColor="#000000"
++                android:gravity="center"
++                android:layout_margin="1dp"
++                android:background="#FFFFFF"/>
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="K"
++                android:textColor="#000000"
++                android:gravity="center"
++                android:layout_margin="1dp"
++                android:background="#FFFFFF"/>
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="L"
++                android:textColor="#000000"
++                android:gravity="center"
++                android:layout_margin="1dp"
++                android:background="#FFFFFF"/>
++
++        </TableRow>
++
++    </TableLayout>
++
++</LinearLayout>
++
++
+Index: app/src/main/java/com/adq/adq/HotelsActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/adq/adq/HotelsActivity.java	(date 1421988435000)
++++ app/src/main/java/com/adq/adq/HotelsActivity.java	(revision )
+@@ -1,52 +1,37 @@
+ package com.adq.adq;
+ 
+ 
++import android.graphics.Typeface;
+ import android.support.v4.app.FragmentTransaction;
+ import android.support.v7.app.ActionBar;
+ import android.support.v7.app.ActionBarActivity;
+ import android.os.Bundle;
++import android.widget.TextView;
+ 
+ 
+-
+-public class HotelsActivity extends ActionBarActivity implements ActionBar.TabListener {
++public class HotelsActivity extends ActionBarActivity {
+ //    public class HotelsActivity extends Activity implements ActionBar.TabListener {
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_hotels);
+ 
+-        setTabas();
++        Typeface iconsFamily = Typeface.createFromAsset(getAssets(), "fonts/glyphIcons.ttf");
+ 
+ 
+-    }
++        TextView iconUser = (TextView) findViewById(R.id.tv_user);
++        iconUser.setTypeface(iconsFamily);
++        iconUser.setText("\ue604");
+ 
+-    private void setTabas(){
+-// Manipulo el Action bar del Activity por código
+-        // primero cargo el actionbar
+-        //android.app.ActionBar actionBar = getActionBar();
+-        // Creo una vista de tablas con el metodo NAVIGATION_MODE_TABS
+-        //actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+-        getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+-/*
+-        actionBar.addTab(actionBar.newTab().setText("Hoteles").setTabListener((android.app.ActionBar.TabListener) this));
+-        actionBar.addTab(actionBar.newTab().setText("Amigos").setTabListener((android.app.ActionBar.TabListener) this));
+-        actionBar.addTab(actionBar.newTab().setText("Perfíl").setTabListener((android.app.ActionBar.TabListener) this));
+-        */
+-    }
++        TextView iconHeart = (TextView) findViewById(R.id.tv_icon_heart);
++        iconHeart.setTypeface(iconsFamily);
++        iconHeart.setText("\ue601");
+ 
++        TextView iconComment = (TextView) findViewById(R.id.tv_comment_bubble);
++        iconComment.setTypeface(iconsFamily);
++        iconComment.setText("\ue610");
+ 
+-    @Override
+-    public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
+ 
+-    }
+-
+-    @Override
+-    public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
+-
+-    }
+-
+-    @Override
+-    public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
+ 
+     }
+ }
