@@ -17,9 +17,7 @@ import com.adq.adq.models.Hotel;
 
 import java.util.ArrayList;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class HotelesFragment extends Fragment {
 
 
@@ -81,7 +79,7 @@ public class HotelesFragment extends Fragment {
        hotel5.setStart(5);
        hoteles.add(hotel5);
 
-// 12. Llamo al RecyclerView -  minuto 28:33 - video 3 Volley
+// 12. Llamo al RecyclerView -  minuto 28:33 - video 3 Volley.
        RecyclerView recyclerView = (RecyclerView) getActivity().findViewById(R.id.recycler_view_hoteles);
        recyclerView.setHasFixedSize(true);
        recyclerView.setAdapter(new HotelesAdapter(hoteles, R.layout.row_hoteles));
