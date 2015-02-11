@@ -20,11 +20,9 @@ import java.util.ArrayList;
 
 public class HotelesFragment extends Fragment {
 
-
     public HotelesFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,6 +32,7 @@ public class HotelesFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_hoteles, container, false);
 
     }
+
 // viene de HotelesAdapter paso 10
 // 11. Sobre escribo el metodo onActivityCreated
    @Override
@@ -68,13 +67,13 @@ public class HotelesFragment extends Fragment {
        hoteles.add(hotel3);
 
        Hotel hotel4 = new Hotel();
-       hotel4.setNombreHotel("Hotel del Campo 4");
+       hotel4.setNombreHotel("Hotel prueba nombre largo 4");
        hotel4.setMunicipio("Químbaya 1");
        hotel4.setStart(4);
        hoteles.add(hotel4);
 
        Hotel hotel5 = new Hotel();
-       hotel5.setNombreHotel("Hotel del Campo 5");
+       hotel5.setNombreHotel("Hotel La Cristalina 5");
        hotel5.setMunicipio("Químbaya 1");
        hotel5.setStart(5);
        hoteles.add(hotel5);
