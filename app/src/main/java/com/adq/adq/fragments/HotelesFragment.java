@@ -41,7 +41,9 @@ public class HotelesFragment extends Fragment {
 
 // 13. Creo un dataset, que luego se va a reemplazar con datos remotos traidos con FrameWork http Volley
 
-       ArrayList<Hotel> hoteles = new ArrayList<Hotel>();
+//       ArrayList<Hotel> hoteles = new ArrayList<Hotel>();
+// Androi studio suguiere usar <> en vez de <Hotel
+       ArrayList<Hotel> hoteles = new ArrayList<>();
        Hotel hotel = new Hotel();
        hotel.setNombreHotel("Hotel del Campo");
        hotel.setMunicipio("Químbaya");
@@ -77,6 +79,36 @@ public class HotelesFragment extends Fragment {
        hotel5.setMunicipio("Químbaya 1");
        hotel5.setStart(5);
        hoteles.add(hotel5);
+
+       Hotel hotel6 = new Hotel();
+       hotel6.setNombreHotel("Hotel del Campo 1");
+       hotel6.setMunicipio("Químbaya 1");
+       hotel6.setStart(1);
+       hoteles.add(hotel6);
+
+       Hotel hotel7 = new Hotel();
+       hotel7.setNombreHotel("Hotel del Campo 2");
+       hotel7.setMunicipio("Químbaya 2");
+       hotel7.setStart(4);
+       hoteles.add(hotel7);
+
+       Hotel hotel8 = new Hotel();
+       hotel8.setNombreHotel("Hotel del Campo 3");
+       hotel8.setMunicipio("Químbaya 1");
+       hotel8.setStart(2);
+       hoteles.add(hotel8);
+
+       Hotel hotel9 = new Hotel();
+       hotel9.setNombreHotel("Hotel prueba nombre muy re largo largo 4");
+       hotel9.setMunicipio("Químbaya 1");
+       hotel9.setStart(4);
+       hoteles.add(hotel9);
+
+       Hotel hotel10 = new Hotel();
+       hotel10.setNombreHotel("Hotel La Cristalina 5");
+       hotel10.setMunicipio("Químbaya 1");
+       hotel10.setStart(5);
+       hoteles.add(hotel10);
 
 // 12. Llamo al RecyclerView -  minuto 28:33 - video 3 Volley.
        RecyclerView recyclerView = (RecyclerView) getActivity().findViewById(R.id.recycler_view_hoteles);
