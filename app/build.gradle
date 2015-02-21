@@ -27,4 +27,7 @@ dependencies {
     /* CardView y RecycleView */
     compile 'com.android.support:cardview-v7:+'
     compile 'com.android.support:recyclerview-v7:+'
+
+    /* Volley - minuto 40:05 video 3 - Volley */
+    compile 'com.mcxiaoke.volley:library:1.0.+'
 }
