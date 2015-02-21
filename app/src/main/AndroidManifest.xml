@@ -28,6 +28,14 @@
             android:name=".UtilsActivity"
             android:label="@string/utils_activity" >
         </activity>
+        <activity
+            android:name=".fragments.ListaJsonActivity"
+            android:label="@string/title_activity_lista_json" >
+        </activity>
+        <activity
+            android:name=".ListaJsonActivity"
+            android:label="@string/title_activity_lista_json" >
+        </activity>
     </application>
 
 </manifest>
