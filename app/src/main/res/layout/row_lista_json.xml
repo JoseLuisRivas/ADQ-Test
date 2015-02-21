@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lista_json"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:elevation="2dp"
+    card_view:cardCornerRadius="2dp">
+
+
+    <!-- Minuto 1:13 video 2 Recycler, Card View -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent" android:layout_height="match_parent">
+
+                <!-- minuto 8:20 - video Volley Framework HTTP -->
+                <ImageView
+                    android:id="@+id/avatar_hotel"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/avatar_finca"
+                    android:layout_marginRight="10dp" />
+
+                <TextView
+                    android:id="@+id/hotel_nombre_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Large Text"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/avatar_hotel"
+                    android:layout_toEndOf="@+id/avatar_hotel" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Large Text"
+                    android:id="@+id/hotel_municipio_item"
+                    android:layout_below="@+id/hotel_nombre_item"
+                    android:layout_toRightOf="@+id/avatar_hotel"
+                    android:layout_toEndOf="@+id/avatar_hotel" />
+
+                <RatingBar
+                    android:id="@+id/hotel_ratingBar_item"
+                    android:numStars="4"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/hotel_municipio_item"
+                    android:layout_toRightOf="@+id/avatar_hotel"
+                    android:layout_toEndOf="@+id/avatar_hotel" />
+            </RelativeLayout>
+
+    </android.support.v7.widget.CardView>

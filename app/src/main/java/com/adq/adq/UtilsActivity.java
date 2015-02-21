@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.adq.adq.fragments.AmigosFragment;
 import com.adq.adq.fragments.HotelesFragment;
+import com.adq.adq.fragments.ListaJsonFragment;
 import com.adq.adq.fragments.PerfilFragment;
 
 /**
@@ -24,6 +25,7 @@ public class UtilsActivity extends ActionBarActivity implements View.OnTouchList
     private HotelesFragment fragmentListar;
     private AmigosFragment fragmentAmigos;
     private PerfilFragment fragmentPerfil;
+    private ListaJsonFragment fragmentLista;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +40,8 @@ public class UtilsActivity extends ActionBarActivity implements View.OnTouchList
         btnFavoritos = (ImageButton) findViewById(R.id.btn_favoritos);
         btnFavoritos.setOnTouchListener(this);
         btnVistaMap = (ImageButton) findViewById(R.id.btn_vista_map);
+        btnVistaMap.setOnTouchListener(this);
+        btnVistaMap = (ImageButton) findViewById(R.id.btn_lista_json);
         btnVistaMap.setOnTouchListener(this);
 
         cargarFragmento(getFragmentListar());
@@ -66,6 +70,14 @@ public class UtilsActivity extends ActionBarActivity implements View.OnTouchList
         }
         return fragmentPerfil;
     }
+
+    public ListaJsonFragment getFragmentLista() {
+        if(fragmentLista == null){
+            fragmentLista = new ListaJsonFragment();
+        }
+        return fragmentLista;
+    }
+
     //</editor-fold>
 
     // minuto 10:05 video 17 - FragmentManager
@@ -115,6 +127,10 @@ public class UtilsActivity extends ActionBarActivity implements View.OnTouchList
             case R.id.btn_vista_map:
                 Toast.makeText(this, "R.id.btn_vista_map", Toast.LENGTH_SHORT).show();
                 cargarFragmento(getFragmentPerfil());
+                break;
+            case R.id.btn_lista_json:
+                Toast.makeText(this, "R.id.btn_lista_json", Toast.LENGTH_SHORT).show();
+                cargarFragmento(getFragmentLista());
                 break;
         }
     }
