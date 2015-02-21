@@ -1,6 +1,7 @@
 package com.adq.adq.fragments;
 
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -15,6 +16,16 @@ import com.adq.adq.R;
 import com.adq.adq.adapters.HotelesAdapter;
 import com.adq.adq.adapters.ListaAdapter;
 import com.adq.adq.models.Lista;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -23,6 +34,10 @@ import java.util.ArrayList;
  */
 public class ListaJsonFragment extends Fragment {
 
+    // Log tag
+    private static final String TAG = ListaJsonFragment.class.getSimpleName();
+    private ProgressDialog progressDialog;
+            ArrayList<Lista> dataset;
 
     public ListaJsonFragment() {
         // Required empty public constructor
@@ -42,7 +57,49 @@ public class ListaJsonFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-// 13. Creo un dataset, que luego se va a reemplazar con datos remotos traidos con FrameWork http Volley
+// Minuto 43:27 video volley
+// Paso la url de nuestro backend
+        //String URL = "http://api.androidhive.info/songs/albums.php";
+        String URL = "http://api.androidhive.info/json/movies.json";
+
+            // Configuramos volley
+            // le definicos que en algun momento vamos a haceer un request
+            // Los fragmentos no tienen contexto
+        RequestQueue queue = Volley.newRequestQueue(getActivity());
+        final ProgressDialog progressDialog = ProgressDialog.show(getActivity(), "Espere por favor", "Estamos preparando los datos");
+//        progressDialog = new ProgressDialog(this);
+//        // Showing progress dialog before making http request
+//        progressDialog.setMessage("Cargando...");
+//        progressDialog.show();
+            // Esperamos un JsonRequest
+            // Decalramos un JsonArrayRequest y le pasamos la URL, un listener cunado fue ok y un listener cundo fue erro
+        JsonArrayRequest request = new JsonArrayRequest(URL, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                Log.e("respuesta", response.toString());
+
+                dataset = new ArrayList<Lista>();
+                dataset = parser(response);
+                // hasta aqui ok
+                //parser(response);
+                progressDialog.cancel();
+                //hidePDialog();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("error", error.toString());
+
+                VolleyLog.d(TAG, "Error: " + error.getMessage());
+                //hidePDialog();
+                progressDialog.cancel();
+
+            }
+        });
+
+        // hacemos la peticion y le pasamos el nombre de la peticcion que vamos a hacer
+        queue.add(request);
+
 
 //       ArrayList<Lista> hoteles = new ArrayList<Lista>();
 // Androi studio suguiere usar <> en vez de <Lista
@@ -116,11 +173,50 @@ public class ListaJsonFragment extends Fragment {
 // 12. Llamo al RecyclerView -  minuto 28:33 - video 3 Volley.
         RecyclerView recyclerView = (RecyclerView) getActivity().findViewById(R.id.recycler_view_lista_json);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setAdapter(new ListaAdapter(hoteles, R.layout.row_lista_json));
+        //recyclerView.setAdapter(new ListaAdapter(hoteles, R.layout.row_lista_json));
+        recyclerView.setAdapter(new ListaAdapter(dataset, R.layout.row_lista_json));
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
+        // Minuto 58:27 - video 3  volley - Llenar un ArrayList con la informacion traida con volley
 
+    }
+
+    private void hidePDialog() {
+        if (progressDialog != null) {
+            progressDialog.dismiss();
+            progressDialog = null;
+        }
+    }
+
+    // Minuto 58:40 - Video 3 - Volley - Convertir a arralis los datos de volley
+    // Creo un metodo devolvera un dato de tipo ArrayList, que recibe la respuesta de volley
+    public ArrayList<Lista> parser (JSONArray response){
+
+        // ArrayList que es el que vamos a retornar
+        ArrayList<Lista> hotelAuxiliar = new ArrayList<Lista>();
+
+        for (int i = 0; i< response.length(); i++){
+            // Creo objeto hotel, para guardar los elemettos de manera dinamica
+            Lista hotel = new Lista();
+            // Creo un JsonObjedt
+            try {
+                JSONObject jsonObject = (JSONObject) response.get(i);
+                hotel.setNombreHotel(jsonObject.getString("title"));
+                hotel.setMunicipio(jsonObject.getString("releaseYear"));
+                hotel.setStart(jsonObject.getInt("rating"));
+
+                Log.e("dato", hotel.toString());
+
+                hotelAuxiliar.add(hotel);
+
+                // Voy al metodo onResponse y hago el llamado a esta funcion con parser()
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
     }
 
     @Override

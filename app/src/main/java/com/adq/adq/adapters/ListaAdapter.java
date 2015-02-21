@@ -69,6 +69,10 @@ import java.util.ArrayList;
             return listas.size();
         }
 
+// Ojo Borrar si no funciona
+
+// Ojo Fin Borrar si no funciona
+
         // 2. Vreo la clase ViewHolder
         public class ViewHolder extends RecyclerView.ViewHolder{
             // 6. Hacemos el llamado de todos elementos que creamos a partir del modelo Lista y que se mostraran en la vista row_hoteles

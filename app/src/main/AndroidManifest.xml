@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.adq.adq" >
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -27,10 +29,6 @@
         <activity
             android:name=".UtilsActivity"
             android:label="@string/utils_activity" >
-        </activity>
-        <activity
-            android:name=".fragments.ListaJsonActivity"
-            android:label="@string/title_activity_lista_json" >
         </activity>
         <activity
             android:name=".ListaJsonActivity"
